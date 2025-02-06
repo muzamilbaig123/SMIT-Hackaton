@@ -9,7 +9,10 @@ function tempConverter() {
     let recInp = Number(inpEle.value);
     let selectedOption = tempSelect.value;
 
-    if(selectedOption === "Celsius to Fahrenheit") {
+    if(isNaN(recInp)) {
+        h1Ele.innerHTML = `Not A Number Guys Plz Enter The Number`
+    }
+    else if(selectedOption === "Celsius to Fahrenheit") {
         h1Ele.innerHTML = `Celsius to Fahrenheit: ${(recInp * 9 / 5) + 32}°F`; 
     } 
     else if(selectedOption === "Celsius to Kelvin") {
